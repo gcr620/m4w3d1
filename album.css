@@ -23,13 +23,21 @@
   max-width: 40rem;
 }
 
+
+
 .card img {
   aspect-ratio: 1/1.7;
   object-fit: cover;
   width: 100%;
 }
 
+.butt{
+  width: 100%;
+}
 
+div.genre_price b{
+  font-size: large;
+}
 
 footer {
   padding-top: 3rem;
