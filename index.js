@@ -36,7 +36,7 @@ const fetchBooks = () => {
                     <button class='btn btn-primary' onclick="addToCart('${book.title}', '${book.price}', '${book.asin}')"> EUR ${book.price} </button>
                     <button class='btn btn-secondary hide' onclick="yeet()"> Nascondi </button>
                     </div>
-                    <a  class="btn btn-secondary mt-2" onclick="info('${book.title}', '${book.price}', '${book.asin}', '${book.img}')">Info</a>
+                    <a href="index.html?q=${book.asin}" class="btn btn-secondary mt-2" onclick="info('${book.title}', '${book.price}', '${book.asin}', '${book.img}')">Info</a>
                   </div>
                 </div>
               </div> </div>`
@@ -102,7 +102,7 @@ function info(title, price, asin, img) {
   let activeParams = window.location.search;
   let objParam = new URLSearchParams(activeParams);
   let bookId = objParam.get("q");
-  fetch(bookUrl + 1940026091)
+  fetch(bookUrl + bookId)
   .then((raw) => raw.json())
   .then((res) => {
     console.log(res);
